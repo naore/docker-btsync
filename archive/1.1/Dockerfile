@@ -19,7 +19,6 @@ CMD ["/sbin/my_init"]
 
 #Add Btsync execution
 RUN mkdir /etc/service/btsync
-ADD startup.init /etc/my_init.d/startup.sh
 ADD btsync.sh /etc/service/btsync/run
 RUN chmod +x /etc/service/btsync/run 
 RUN chmod +x /etc/my_init.d/startup.sh
