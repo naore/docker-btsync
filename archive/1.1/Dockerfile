@@ -8,7 +8,7 @@ RUN mkdir -p /btsync/.sync
 ADD btsync.conf /etc/btsync.conf
 
 
-
+#Ports and mounts
 EXPOSE 8888
 EXPOSE 55555
 VOLUME /btsync
@@ -17,10 +17,12 @@ VOLUME /btsync
 #Startup
 CMD ["/sbin/my_init"]
 
+
 #Add Btsync execution
 RUN mkdir /etc/service/btsync
 ADD btsync.sh /etc/service/btsync/run
 RUN chmod +x /etc/service/btsync/run 
-RUN chmod +x /etc/my_init.d/startup.sh
+
+
 #Cleanup
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
