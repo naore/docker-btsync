@@ -2,7 +2,7 @@ FROM linuxserver/baseimage
 MAINTAINER LinuxServer.io - IronicBadger <docker@linuxserver.io>
 
 # btsync specifics
-RUN curl -o /usr/bin/btsync.tar.gz http://download.getsyncapp.com/endpoint/btsync/os/linux-x64/track/stable && \
+RUN curl -o /usr/bin/btsync.tar.gz https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz && \
 cd /usr/bin && tar -xzvf btsync.tar.gz && rm btsync.tar.gz && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -15,9 +15,6 @@ ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run
 RUN chmod -v +x /etc/my_init.d/*.sh
-
-
-
 
 
 # Mappings and Ports
