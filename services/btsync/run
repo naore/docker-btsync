@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /sbin/setuser abc /usr/bin/btsync --config /etc/btsync.conf --nodaemon
+exec /sbin/setuser abc /app/btsync --config /config/btsync.conf --nodaemon

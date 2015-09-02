@@ -1,17 +1,10 @@
 {
   "listening_port" : 55555,
-  "storage_path" : "/btsync/.sync",
-  "check_for_updates" : true,
+  "storage_path" : "/standard/.sync",
+  "check_for_updates" : false,
   "use_upnp" : false,
   "webui" :
   {
     "listen" : "0.0.0.0:8888"
   }
 }
-
-
-
-
-
-
-
