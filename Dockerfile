@@ -8,10 +8,6 @@ curl -o /app/btsync.tar.gz http://syncapp.bittorrent.com/1.4.111/btsync_x64-1.4.
 tar -xzvf btsync.tar.gz && rm btsync.tar.gz && mv /app/btsync /app/btsync-1.4 && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-
-# Config file
-ADD btsync.conf /etc/btsync.conf
-
 #Adding Custom files
 ADD defaults/ /defaults/
 ADD init/ /etc/my_init.d/
