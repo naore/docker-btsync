@@ -2,7 +2,7 @@
 
 The [LinuxServer.io](http://linuxserver.io) team brings you another quality container release featuring auto-update on startup, easy user mapping and community support. Be sure to checkout our [forums](http://forum.linuxserver.io) or for real-time support our [IRC](http://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
 
-# linuxserver/quassel-core
+# linuxserver/btsync
 
 ![btsync](http://static3.actualidadipad.com/wp-content/uploads/2013/08/BitTorrent-Sync.jpg)
 
