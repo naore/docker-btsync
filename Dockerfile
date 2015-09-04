@@ -17,5 +17,5 @@ RUN chmod -v +x /etc/my_init.d/*.sh
 
 
 # Mappings and Ports
-EXPOSE ["8888","55555"]
+EXPOSE 8888 55555
 VOLUME /btsync
