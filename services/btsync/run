@@ -1,3 +1,3 @@
 #!/bin/bash
 
-exec /sbin/setuser abc /app/btsync --config /config/btsync.conf --nodaemon
+exec /sbin/setuser abc ${APP_PATH}  --config "$CONF_PATH" --nodaemon
