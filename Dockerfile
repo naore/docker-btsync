@@ -1,10 +1,15 @@
 FROM linuxserver/baseimage
 MAINTAINER LinuxServer.io - IronicBadger <docker@linuxserver.io>
 
-# fetch btsync packages
+ENV APTLIST="zip unzip"
 
+# install packages
+RUN apt-get update -q && \
+apt-get install $APTLIST -qy && \
+
+# fetch btsync packages
 # stable
- RUN curl -o /tmp/btsync_stable.tar.gz -L https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz && \
+ curl -o /tmp/btsync_stable.tar.gz -L https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz && \
  mkdir -p /app/btsync-latest && \
  tar -xzvf /tmp/btsync_stable.tar.gz -C /app/btsync-latest && \
 # legacy
@@ -13,7 +18,8 @@ MAINTAINER LinuxServer.io - IronicBadger <docker@linuxserver.io>
  tar -xzvf /tmp/btsync_legacy.tar.gz -C /app/btsync-1.4 && \
 
 # cleanup
-rm -rf /tmp/*
+apt-get clean -y && \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #Adding Custom files
 ADD defaults/ /defaults/
@@ -24,4 +30,5 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 # Mappings and Ports
 EXPOSE 8888 55555
 VOLUME /btsync
+
 
