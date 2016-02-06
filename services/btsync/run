@@ -8,4 +8,4 @@ APP_PATH="/app/btsync-latest"
 CONF_PATH="/config/latest-btsync.conf"
 fi
 
-exec /sbin/setuser abc "$APP_PATH"  --config "$CONF_PATH" --nodaemon
+exec /sbin/setuser abc "$APP_PATH"/btsync  --config "$CONF_PATH" --nodaemon
