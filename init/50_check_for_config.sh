@@ -11,6 +11,7 @@ else
 echo "using stable version, config file is \"/config/latest-btsync.conf\"" 
 fi
 
+chown abc:abc -R /app/btsync* 
 chown abc:abc -v /config/*btsync.conf
 
 
