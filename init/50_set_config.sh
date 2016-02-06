@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # make sync folders
-mkdir -p /config{/.sync,.legacy-sync}
-chown abc:abc /config{/.sync,.legacy-sync}
+mkdir -p /config/{.sync,.legacy-sync}
+chown abc:abc /config/{.sync,.legacy-sync}
 
 # test for stable config file in /config
 [[ ! -f /config/latest-btsync.conf ]] && cp /defaults/btsync.conf.stable /config/latest-btsync.conf
