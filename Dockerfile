@@ -1,5 +1,5 @@
 FROM linuxserver/baseimage
-MAINTAINER LinuxServer.io - IronicBadger <docker@linuxserver.io>
+MAINTAINER Sparklyballs <sparklyballs@linuxserver.io> , LinuxServer.io - IronicBadger <docker@linuxserver.io>
 
 ENV APTLIST="zip unzip"
 
