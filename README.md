@@ -13,7 +13,7 @@ The [LinuxServer.io](http://linuxserver.io) team brings you another quality cont
 ```
 docker create \
 	--name=btsync \
-	-v <path to config dir>:/btsync/ \
+	-v <path to config dir>:/config \
 	-v <path to sync data>:/mnt/point \
 	-e PGID=<gid> -e PUID=<uid> \
 	-p 8888:8888 \
@@ -25,7 +25,7 @@ docker create \
 
 * `-p 8888` - the port sync listens for connections on for webUI
 * `-p 55555` - the port sync listens for connections on for Torrent traffic
-* `-v /btsync` - configuration storage
+* `-v /config` - configuration storage
 * `-v /mnt/point` - to be replaced with the locations you wish to make available to Sync
 * `-e PGID` for for GroupID - see below for explanation
 * `-e PUID` for for UserID - see below for explanation
