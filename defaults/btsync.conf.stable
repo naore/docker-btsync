@@ -2,7 +2,7 @@
   "listening_port" : 55555,
   "storage_path" : "/config/.sync",
   "check_for_updates" : true,
-  "use_upnp" : false,
+  "use_upnp" : true,
   "webui" :
   {
     "listen" : "0.0.0.0:8888"
