@@ -9,11 +9,11 @@ apt-get install $APTLIST -qy && \
 
 # fetch btsync packages
 # stable
- curl -o /tmp/btsync_stable.tar.gz -L https://download-cdn.getsync.com/stable/linux-x64/BitTorrent-Sync_x64.tar.gz && \
+ curl -o /tmp/btsync_stable.tar.gz -L "https://raw.githubusercontent.com/FreemanZY/BTSync-DHT-Docker/master/btsync_x64-1.4.111.tar.gz" && \
  mkdir -p /app/btsync-latest && \
  tar -xzvf /tmp/btsync_stable.tar.gz -C /app/btsync-latest && \
 # legacy
- curl -o /tmp/btsync_legacy.tar.gz -L http://syncapp.bittorrent.com/1.4.111/btsync_x64-1.4.111.tar.gz && \
+ curl -o /tmp/btsync_legacy.tar.gz -L "https://raw.githubusercontent.com/FreemanZY/BTSync-DHT-Docker/master/btsync_x64-1.4.111.tar.gz" && \
  mkdir -p /app/btsync-1.4 && \
  tar -xzvf /tmp/btsync_legacy.tar.gz -C /app/btsync-1.4 && \
 
