@@ -1,12 +1,3 @@
-![http://linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)
-
-The [LinuxServer.io](http://linuxserver.io) team brings you another quality container release featuring auto-update on startup, easy user mapping and community support. Be sure to checkout our [forums](http://forum.linuxserver.io) or for real-time support our [IRC](http://www.linuxserver.io/index.php/irc/) on freenode at `#linuxserver.io`.
-
-# linuxserver/btsync
-
-![btsync](http://static3.actualidadipad.com/wp-content/uploads/2013/08/BitTorrent-Sync.jpg)
-
-[BitTorrent Sync](https://www.getsync.com/) is fast, private file sharing for teams and individuals using the BitTorrent protocol.
 
 ## Usage
 
@@ -35,14 +26,3 @@ docker create \
 **TL;DR** - The `PGID` and `PUID` values set the user / group you'd like your container to 'run as' to the host OS. This can be a user you've created or even root (not recommended).
 
 Part of what makes our containers work so well is by allowing you to specify your own `PUID` and `PGID`. This avoids nasty permissions errors with relation to data volumes (`-v` flags). When an application is installed on the host OS it is normally added to the common group called users, Docker apps due to the nature of the technology can't be added to this group. So we added this feature to let you easily choose when running your containers.  
-
-## Miscellaneous
-
-* Upgrade to the latest version of BitTorrent Sync simply `docker restart btsync`.
-* Monitor the logs of the container in realtime `docker logs -f btsync`.
-* Attach to shell of running instance `docker exec -it btsync bash`.
-
-## Versions
-
-* 01.09.15: Updated and brought inline with LinuxServer policies
-* 1.0: Inital release by Lonix
