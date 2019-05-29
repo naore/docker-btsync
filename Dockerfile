@@ -1,4 +1,3 @@
 FROM naore/btsync:stable
-MAINTAINER naore 
-RUN rm -rf /app/btsync-latest
+MAINTAINER naore
 ENV HOME="/mnt/point"
