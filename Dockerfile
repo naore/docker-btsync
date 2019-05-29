@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER naore , Sparklyballs <sparklyballs@linuxserver.io> , LinuxServer.io - IronicBadger <docker@linuxserver.io>
 
-ENV APTLIST="zip unzip"
+ENV APTLIST="zip unzip curl"
 
 # install packages
 RUN apt-get update -q && \
