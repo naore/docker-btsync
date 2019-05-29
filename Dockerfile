@@ -26,7 +26,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 ADD defaults/ /defaults/
 ADD init/ /etc/my_init.d/
 ADD services/ /etc/service/
-RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh && \
+RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh 
 
 # Mappings and Ports
 EXPOSE 8888 55555
