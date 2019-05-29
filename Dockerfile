@@ -3,15 +3,8 @@ MAINTAINER Sparklyballs <sparklyballs@linuxserver.io> , LinuxServer.io - IronicB
 
 ENV APTLIST="zip unzip"
 
-
-#Adding Custom files
-ADD defaults/ /defaults/
-ADD init/ /etc/my_init.d/
-ADD services/ /etc/service/
-RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh && \
-
 # install packages
- apt-get update -q && \
+RUN apt-get update -q && \
  apt-get install $APTLIST -qy && \
 
 # fetch btsync packages
@@ -27,6 +20,12 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh && \
 # cleanup
 apt-get clean -y && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+#Adding Custom files
+ADD defaults/ /defaults/
+ADD init/ /etc/my_init.d/
+ADD services/ /etc/service/
+RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh && \
 
 # Mappings and Ports
 EXPOSE 8888 55555
